@@ -1,0 +1,132 @@
+.section {
+  padding: 110px 0;
+  background: var(--bg-2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  transition: all 0.5s cubic-bezier(0.2,0.8,0.2,1);
+  border: 1px solid rgba(255,255,255,0.15) !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05), 0 8px 32px rgba(0,0,0,0.5);
+  background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+}
+
+.cardGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.card:hover .cardGlow {
+  opacity: 1;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.emoji {
+  font-size: 32px;
+}
+
+.date {
+  font-size: 12px;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.role {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent-1);
+  margin-bottom: 14px;
+}
+
+.desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 22px;
+  line-height: 1.7;
+}
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.techTag {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 11px;
+  border-radius: 5px;
+  background: rgba(124, 107, 232, 0.12);
+  color: var(--accent-1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: default;
+  transition: background 0.2s;
+}
+
+.techTag:hover {
+  background: rgba(124, 107, 232, 0.25);
+}
+
+.links {
+  display: flex;
+  gap: 12px;
+}
+
+.linkBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 10px 24px;
+  border-radius: 50px;
+  transition: all 0.4s var(--ease);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.linkBtn:hover {
+  background: var(--glass-bg-hover);
+  border-color: var(--accent-neon);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 25px var(--accent-glow);
+  color: #fff;
+}
